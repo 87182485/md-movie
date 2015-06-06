@@ -1,0 +1,24 @@
+{
+  "name": "md-movie",
+  "version": "0.0.1",
+  "description": "moive project uses angular-material",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/87182485/md-movie.git"
+  },
+  "keywords": [
+    "angular",
+    "angular-material",
+    "meterial=design"
+  ],
+  "author": "Gary Yang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/87182485/md-movie/issues"
+  },
+  "homepage": "https://github.com/87182485/md-movie"
+}
