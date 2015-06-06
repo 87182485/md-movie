@@ -1,0 +1,18 @@
+{
+  "name": "md-movie",
+  "version": "0.0.1",
+  "homepage": "https://github.com/87182485/md-movie",
+  "authors": [
+    "yfg0462@gmail.com <yfg0462@gmail.com>"
+  ],
+  "description": "angular material movie project",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
