@@ -21,6 +21,11 @@ gulp.task('styles', function(){
 	.pipe(gulp.dest(config.styles));
 });
 
+gulp.task('move-svg', function() {
+	return  gulp.src(config.mdsvg)
+		.pipe(gulp.dest(config.svg));
+});
+
 gulp.task('wiredep', function() {
 	var options = config.getWiredepDefaultOptions;
 	var wiredep = require('wiredep').stream;

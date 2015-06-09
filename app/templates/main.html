@@ -1,1 +1,50 @@
-<h1>{{title}}</h1>
+<h1>MD Form</h1>
+<div class="form-container">
+    <md-content layout-padding ng-if="!formSubmitted">
+        <form name="myForm" novalidate ng-submit="submit(myForm)">
+            <div layout layout-sm="column">
+                <md-input-container class="md-icon-float">
+                    <label>Name</label>
+                    <md-icon md-svg-src="app/images/svg/action/svg/production/ic_face_24px.svg" class="name"></md-icon>
+                    <input name="name" ng-model="profile.name" ng-required="true">
+                </md-input-container>
+            </div>
+            <div layout layout-sm="column">
+                <md-input-container class="md-icon-float">
+                    <md-icon md-svg-src="app/images/svg/communication/svg/production/ic_email_24px.svg" class="email"></md-icon>
+                    <input name="email" ng-model="profile.email" type="email" placeholder="Email" ng-required="true">
+                </md-input-container>
+            </div>
+            <md-input-container md-no-float>
+                <md-icon md-svg-src="app/images/svg/communication/svg/production/ic_comment_24px.svg" class="comments"></md-icon>
+                <input placeholder="Any comments" md-maxlength="30" ng-required="true" name="description" ng-model="profile.description">
+            </md-input-container>
+            <section class="section-buttons" layout="row" layout-align="center center">
+                <md-button class="md-fab md-primary" aria-label="Submit" ng-disabled="myForm.$invalid">
+                    <md-icon class="{{myForm.$invalid?'edit':'done'}}" md-svg-src="{{myForm.$invalid ?
+                    'app/images/svg/content/svg/production/ic_create_24px.svg'
+                    : 'app/images/svg/action/svg/production/ic_done_24px.svg'}}">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </md-icon>
+                </md-button>
+                <md-button ng-click="clear(myForm)" type="button" class="md-fab" aria-label="Clear" ng-disabled="myForm&&!myForm.$dirty">
+                    <md-icon md-svg-src="app/images/svg/content/svg/production/ic_clear_24px.svg"></md-icon>
+                </md-button>
+            </section>
+        </form>
+    </md-content>
+    <md-content ng-if="formSubmitted" class="md-padding">
+        <md-card>
+            <md-card-content>
+                <h3>{{profile.name}}</h3>
+                <p>{{profile.description}}</p>
+            </md-card-content>
+            <div class="md-actions" layout="row" layout-align="center center">
+                <md-button ng-click="edit()">Edit</md-button>
+                <md-button>Send to {{profile.email}}</md-button>
+            </div>
+        </md-card>
+    </md-content>
+</div>

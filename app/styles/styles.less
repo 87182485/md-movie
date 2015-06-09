@@ -1,11 +1,29 @@
+.form-container{
+  width:70%;
+}
+
 .md-button{
 	margin:0px;
 	width:100%;
 }
 
+.section-buttons{
+  background: #f7f7f7;
+  border-radius: 3px;
+  text-align: center;
+  margin: 1em;
+  position: relative !important;
+  padding-bottom: 10px;
+  .md-button {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right:16px;
+  }
+}
+
 .img-wrapper{
-  width:63%;
-  height:70%;
+  width:100%;
+  height:100%;
   img{
     width:100%;
     height:100%;
@@ -65,3 +83,36 @@
   font-weight: 700;
   width: 100%;
   text-align: center; }
+
+
+//Animate section
+md-icon, md-icon span{
+  transition: all 500ms ease;
+}
+
+.edit span {
+  height: 10px;
+  transform: translateY(29px);
+}
+
+.edit .second {
+  transform: translateY(0);
+}
+
+.edit .third{
+  transform: translateY(60px);
+}
+
+.edit span, .done span {
+  height: 10px;
+}
+
+.done {
+  transform: rotate(360deg);
+}
+
+.done .second,
+.done .third {
+  transform: rotate(-45deg) translateY(56px);
+  width: 40px;
+}

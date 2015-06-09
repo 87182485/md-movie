@@ -4,6 +4,9 @@
 	UpcomingCtrl.$inject = ['$scope', 'upcomingService'];
 	
 	function UpcomingCtrl($scope, upcomingService){
+		//TODO: abstract size parameter into common service
+
+		var resizeProxyUrl = 'http://imageproxy.herokuapp.com/convert/resize/500x755/source/';
 		$scope.title = 'Upcoming';
 		
 		$scope.retrieveOriginalPosterUrl = retrieveOriginalPosterUrl;
@@ -27,7 +30,8 @@
 			var mappedMovies = movies.map(function(item){
 				angular.extend(item, {
 					backgroundColor:backgroundGenerator(item.runtime),
-					gridAttribute:getGridValue(item.ratings.audience_score)
+					gridAttribute:getGridValue(item.ratings.audience_score),
+					posterUrl:resizeProxyUrl+encodeURIComponent(retrieveOriginalPosterUrl(item.posters.original))
 				});
 				
 				return item;

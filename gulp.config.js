@@ -7,6 +7,8 @@ module.exports = function() {
 		styles: base + 'styles/',
 		css:base+'styles/styles.css',
 		less: base + 'styles/styles.less',
+		mdsvg: './bower_components/' + 'material-design-icons/**/svg/production/*.svg',
+		svg: base+'images/svg/',
 		js:[
 			base + '**/*.module.js',
 			base + '**/*.js',
