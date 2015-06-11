@@ -9,17 +9,21 @@
 		
 		$scope.menuItems = [
 			{
-				title:'Main',
+				title:'About me',
+				url:'/about'
+			},
+			{
+				title:'Demos',
 				url:'/'
 			},
-			{
-				title:'Upcoming',
-				url:'/upcoming'
-			},
-			{
-				title:'Ranking',
-				url:'/rankings'
-			}
+			//{
+			//	title:'Upcoming',
+			//	url:'/upcoming'
+			//},
+			//{
+			//	title:'Ranking',
+			//	url:'/rankings'
+			//}
 		];
 		
 		$scope.select = function(index){

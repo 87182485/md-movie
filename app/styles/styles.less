@@ -21,14 +21,20 @@
   }
 }
 
-.img-wrapper{
-  width:100%;
-  height:100%;
-  img{
-    width:100%;
-    height:100%;
+//About me
+.my-avatar{
+  .avatar-wrapper{
+    position: relative;
+    img{
+      border-radius: 50%;
+      margin-left: 20%;
+    }
+    .buttons .md-top{
+      padding:15px;
+    }
   }
 }
+
 
 //Grid style copied from Angular Material
 .grid-movies md-icon {
@@ -71,18 +77,48 @@
   background: #ff80ab; }
 .grid-movies md-grid-tile {
   transition: all 300ms ease-out 50ms; }
-.grid-movies md-grid-tile md-icon {
-  padding-bottom: 32px; }
 .grid-movies md-grid-tile md-grid-tile-footer {
   background: rgba(0, 0, 0, 0.68);
   height: 36px; }
-.grid-movies md-grid-tile-footer figcaption {
-  width: 100%; }
-.grid-movies md-grid-tile-footer figcaption h3 {
-  margin: 0;
-  font-weight: 700;
-  width: 100%;
-  text-align: center; }
+.grid-movies{
+  md-grid-tile{
+    .info-container{
+      display: none;
+      width:36%;
+      md-button{
+        md-icon{
+          margin-left: 20px;
+        }
+      }
+    }
+    .img-wrapper{
+      height:100%;
+      width: 64%;
+      img{
+        width:100%;
+        height:100%;
+      }
+    }
+    md-grid-tile-header, md-grid-tile-footer{
+      figcaption {
+        width: 100%;
+        h3{
+          margin: 0;
+          font-weight: 700;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    &:hover, &:focus{
+      .info-container{
+        display: flex;
+        transition-duration:1s;
+      }
+    }
+  }
+
+}
 
 
 //Animate section

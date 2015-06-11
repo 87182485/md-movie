@@ -23,13 +23,13 @@
   <!--endinject-->
 </head>
 
-<body ng-app="mdApp" layout="column" ng-controller="menuCtrl">
+<body ng-app="mdApp" layout="column" ng-controller="menuCtrl" ng-cloak>
   <md-toolbar layout="row">
     <md-toolbar-tools>
       <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button menuBtn">
         <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
       </md-button>
-      <h1 layout-align-gt-sm="center" class="md-toolbar-tools">Hello Moive</h1>
+      <h1 layout-align-gt-sm="center" class="md-toolbar-tools" ng-bind="title"></h1>
     </md-toolbar-tools>
   </md-toolbar>
   <div layout="row" flex>
@@ -62,13 +62,25 @@
   <!--endbower-->
   
   <!--inject:js-->
+
   <script src="/app/scripts/app.js"></script>
+
   <script src="/app/scripts/config/app.config.js"></script>
+
+  <script src="/app/scripts/controllers/about.js"></script>
+
   <script src="/app/scripts/controllers/main.js"></script>
+
   <script src="/app/scripts/controllers/menu.js"></script>
+
   <script src="/app/scripts/controllers/ranking.js"></script>
+
   <script src="/app/scripts/controllers/upcoming.js"></script>
+
+  <script src="/app/scripts/services/form.js"></script>
+
   <script src="/app/scripts/services/upcoming.js"></script>
+
   <!--endinject-->
 </body>
 </html>
