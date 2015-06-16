@@ -36,6 +36,10 @@ gulp.task('wiredep', function() {
 	.pipe(gulp.dest(base));
 });
 
+gulp.task('optimize', function() {
+	//TODO:
+});
+
 gulp.task('inject', ['styles','wiredep'], function() {
 	return gulp.src(config.index)
 	.pipe($.inject(gulp.src(config.css)))
